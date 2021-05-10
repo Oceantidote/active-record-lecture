@@ -3,6 +3,11 @@ RSpec::Core::RakeTask.new(:spec)
 
 require_relative 'config/application'
 
+desc "tell me I'm dumb"
+task :dumb do
+  puts "You are dumb"
+end
+
 desc 'Look for style guide offenses in your code'
 task :rubocop do
   sh 'rubocop --format simple || true'
